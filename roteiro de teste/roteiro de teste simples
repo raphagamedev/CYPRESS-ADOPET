@@ -1,0 +1,108 @@
+#|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|
+#|  				ROTEIRO DE TESTE SIMPLES                     |
+#|_______________________________________________________________|
+#
+# FUNCIONALIDADE DO SITE
+
+CENARIO 1: CADASTRO COM SUCESSO - [APROVADO]
+
+Passos: 
+    1°-> O usuário deve acessar a pagina de CADASTRO clicando no link
+    2°-> O usuário deve fornecer um nome
+    3°-> O usuário deve inserir um email valido
+    4°-> O usuário deve inserir uma senha valida cumprindo os requisitos 
+    5º-> O usuário deve repetir a senha digitada no campo acima
+    6°-> O usuário deve clicar em "Cadastrar"
+
+Resultado Esperado:
+    
+    1°-> O sistema autenticará as credenciais fornecidas
+    2°-> O sistema redirecionará para a tela principal (/home)
+
+Funcionalidade: 
+    
+    1º-> Cadastro efetuado
+
+Ocorrido durante o teste: 
+
+    1º-> O usuário conseguiiu se cadastrar de forma correta 
+#---------------------------------------------------------------------------
+CENARIO 2: CADASTRO COM EMAIL REPETIDO
+
+Passos: 
+    1°-> O usuário deve acessar a pagina de CADDASTRO clicando no link
+    2°-> O usuário deve fornecer um nome
+    3°-> O usuário deve inserir um email valido (POREM UM JA CADDASTRADO)
+    4°-> O usuário deve inserir uma senha valida cumpriindo os requisitos 
+    5º-> O usuário deve repetir a senha digiitada no campo acima
+    6°-> O usuário deve clicar em "Cadastrar"
+
+Resultado Esperado:
+    
+    1°-> O sistema autenticará as credenciais fornecidas
+    2°-> O sistema informara que não é possivel Cadastrar
+    3°-> O sistema retornara uma mensagem informando o porque nao foi possivel cadastrar
+
+Funcionalidade: 
+    
+    1º-> Cadastro não efetuado
+
+Ocorrido durante o teste: 
+
+    1º-> Não foi possivel cadastrar o usuário utilizando um email ja cadastrado, porem não ha uma tratativa informando que o email
+    ja esta sendo usado.
+
+#----------------------------------------------------------------------------
+
+CENARIO 3: EFETUANDO LOGIN
+
+Passos: 
+    1°-> O usuário deve acessar a pagina de LOGIN
+    2°-> O usuário deve inserir um email valido (cadastrado) *verificar os email mais comuns (Gmail,Outlook,Yahoo...)
+    3°-> O usuário deve inserir a senha correta 
+    4°-> O usuário deve clicar em "Entrar"
+
+Resultado Esperado:
+    
+    1°-> O sistema autenticará as credenciais fornecidas
+    2°-> O sistema redirecionará para a tela principal (/home)
+
+Funcionalidade: 
+    
+    1º-> Logar no site
+
+Ocorrido durante o teste: 
+
+    1º-> 
+
+#----------------------------------------------------------------------------
+################################################################################################################################################
+################################################################################################################################################
+#
+#
+#				                               MODDELO BASICO DE COMO ABRIR UMA ISSUE 
+#
+#
+################################################################################################################################################
+################################################################################################################################################
+
+#[MODULO]-[AÇÃO]-[OCORRIDO]
+#
+#EXEMPLO: [PAGINA PRINCIPAL]-[CADASTRO DE USUÁRIO]-[O SISTEMA NÃO INFORMA QUANDO O EMAIL JA ESTA EM USO]
+#--------------------------------
+[PAGINA PRINCIPAL]-[CADASTRO DE USUÁRIO]-[O SISTEMA NÃO INFORMA QUANDO O EMAIL JA ESTA EM USO]
+
+**VERSÃO:** -> PRODUÇÃO
+
+**SOLICITANTE:** -> RAPHAEL
+
+**CASO REPORTADO:** -> FOI IDENTIFICADO QUE AO UTILIZAR O MESMO EMAIL PARA CADASTRAR UM SEGUNDO USUÁRIO, O SISTEMA NÃO INFORMA QUE O EMAIL JÁ ESTÁ EM USO.
+
+**EVIDENCIA** -> PRINT/ VIDEO
+
+**ESPERADO:** -> SE POSSÍVEL, AO UTILIZAR UM EMAIL JÁ CADASTRADO, O SISTEMA PODERIA RETORNAR UM AVISO "EMAIL JÁ CADASTRADO".
+
+**PROCEDIMENTO:**
+STEP1: ACESSAR A PÁGINA DE CADASTRO
+STEP2: UTILIZAR UM EMAIL JÁ CADASTRADO
+STEP3: SEGUIR OS PROCEDIMENTOS NORMAIS E TENTAR CADASTRAR
